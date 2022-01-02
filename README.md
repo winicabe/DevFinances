@@ -42,7 +42,7 @@
 		[] 3. URI (com exceção da aula de URN)
 	### Preparação para próxima aula
 	* HTML
-		[] Posso ver e ouvir o HTML
+		[x] Posso ver e ouvir o HTML
 		[] Formulários de outro planeta
 	* CSS
 		[] Nem só de classes ou ID's
