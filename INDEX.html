@@ -26,21 +26,21 @@
                     <span>Entradas</span>
                     <img src="./assets/images/plus.svg" alt="logo demostrativa Entradas">
                 </h3>
-                <p>5.000</p>
+                <p id="expenseDisplay">5.000</p>
             </div>
-            <div class="card"> 
+            <div class="card">
                 <h3>
                     <span>Saídas</span>
                     <img src="./assets/images/minus.svg" alt="logo demostrativa Entradas">
                 </h3>
-                <p>5.000</p>
+                <p id="incomeDisplay">5.000</p>
             </div>
             <div class="card total">
                 <h3>
                     <span>Total</span>
                     <img src="./assets/images/total.svg" alt="logo demostrativa Entradas">
                 </h3>
-                <p>5.000</p>
+                <p id="totalDisplay">5.000</p>
             </div>
 
 
@@ -59,25 +59,7 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500</td>
-                        <td class="date">25/12/2021</td>
-                        <td><img src="./assets/images/minus.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação de Site</td>
-                        <td class="income">+ R$ 5000</td>
-                        <td class="date">25/12/2021</td>
-                        <td><img src="./assets/images/minus.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Comida</td>
-                        <td class="expense">- R$ 700</td>
-                        <td class="date">25/12/2021</td>
-                        <td><img src="./assets/images/minus.svg" alt=""></td>
-                    </tr>
+                <tbody id="tabela">
                 </tbody>
             </table>
         </section>
@@ -87,18 +69,18 @@
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.validateFields()">
                     <div class="input-grup">
-                        <label class="sr-only "for="description">Descrição</label>
-                        <input type="text" id="description" name="description" placeholder="Descrião" >
+                        <label class="sr-only " for="description">Descrição</label>
+                        <input type="text" id="description" name="description" placeholder="Descrião">
                     </div>
                     <div class="input-grup">
-                        <label class="sr-only "for="amount">Valor</label>
-                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" >
+                        <label class="sr-only " for="amount">Valor</label>
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00">
                         <small>Use o sinal -(negativo) para despesas e ,(vírgulas) para casas decimais</small>
                     </div>
                     <div class="input-grup">
-                        <label class="sr-only "for="date">Data</label>
+                        <label class="sr-only " for="date">Data</label>
                         <input type="date" id="date" name="date">
                     </div>
                     <div class="input-grup actions">
@@ -112,19 +94,7 @@
     <footer>
         <p>dev.finance$</p>
     </footer>
-    <script>
-        const Modal = {
-            open(){
-                document.querySelector(".modal-overlay").classList.add("active")
-            },
-            close(){
-                document.querySelector(".modal-overlay").classList.remove("active")
-            }
-        }
-    </script>
-
-
-
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

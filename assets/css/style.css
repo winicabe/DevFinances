@@ -196,7 +196,7 @@ footer{
     padding: 2.4rem;
     width: 95%;
     max-width: 500px;
-    
+    font-weight: normal;
 }
 /* FORM */
 #form h2{
